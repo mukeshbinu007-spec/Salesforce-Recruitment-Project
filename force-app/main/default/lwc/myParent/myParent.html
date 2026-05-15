@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Job Application Status">
+        <div class="slds-var-m-round_medium">
+            <template for:each={jobApplicationList.data} for:item="application">
+                <c-my-child
+                    key={application.Id}
+                    jobapplicationname={application.Name}
+                    jobapplicationstatus={application.Status__c}
+                >
+                </c-my-child>
+            </template>
+        </div>
+    </lightning-card>
+</template>
+
